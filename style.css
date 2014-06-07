@@ -1,0 +1,16 @@
+
+.verse {
+    display: flex;
+    margin-bottom: 10px;
+    text-indent: 15px;
+}
+
+.verse div {
+    width: 300px;
+    flex: 1;
+}
+
+.verse .en {
+    color: #aaa;
+    margin-left: 10px;
+}
