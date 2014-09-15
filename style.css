@@ -1,8 +1,15 @@
 
+body {
+    width: 400px;
+    margin: 10px auto;
+}
+
 .verse {
     display: flex;
     margin-bottom: 10px;
     text-indent: 15px;
+    width: 800px;
+    line-height: 2.5;
 }
 
 .verse div {
@@ -11,6 +18,14 @@
 }
 
 .verse .en {
-    color: #aaa;
+    color: #ddd;
     margin-left: 10px;
+    position: relative;
+    left: -405px;
+    top: 20px;
+    transition: .3s;
+}
+
+.verse .en:hover {
+    color: #888;
 }
