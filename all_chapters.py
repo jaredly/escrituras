@@ -21,6 +21,7 @@ TOP = '''
 <head>
     <meta charset="utf8">
     <title>Escrituras</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 '''
@@ -40,12 +41,12 @@ def full_page(groups, items):
             chapters.append('<a href="{}">{}</a>'.format(fname, title.encode('utf8')))
 
     return TOP + ('<ul class="books">' +
-        ul('<li>',
+        ul('<li class="book-list" tabindex="0">',
             '</li>\n',
-            ('<div class="book">{}</div><ul>'.format(items[bookid]['title'].encode('utf8')) +
-                ul('<li>',
+            ('<div class="book-title">{}</div><ul class="book-chapters">'.format(items[bookid]['title'].encode('utf8')) +
+                ul('<li class="chapter">',
                     '</li>\n',
-                    ('<a href="{}">{}</a>'.format(fname, title.encode('utf8'))
+                    ('<a href="{}" class="chapter-link">{}</a>'.format(fname, title.encode('utf8'))
                         for (title, fname) in items[bookid]['chapters'])) +
             '</ul>\n' for bookid in groups)) + '</ul>') + BOTTOM
 
@@ -56,13 +57,19 @@ def main(base = 'www'):
     groups = []
     items = {}
 
-    for title, uri in chapters:
+    for i, (title, uri) in enumerate(chapters):
         print title,
         fname = uri_to_filename(uri)
         fullname = os.path.join(base, fname)
-        if not os.path.isfile(fullname) or True:
+        if not os.path.isfile(fullname):
             print "writing"
-            content = composer.chapter_page(title, uri, style="../chapter.css")
+            nxt = 'index.html'
+            prv = 'index.html'
+            if i < len(chapters) - 1:
+                nxt = uri_to_filename(chapters[i + 1][1])
+            if i > 0:
+                prv = uri_to_filename(chapters[i - 1][1])
+            content = composer.chapter_page(title, uri, style="../chapter.css", nxt=nxt, prv=prv)
             mkdir_p(os.path.dirname(fullname))
             open(fullname, 'w').write(content)
         else:

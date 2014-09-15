@@ -16,9 +16,16 @@ TOP='''
     <link rel="stylesheet" href="{}">
 </head>
 <body>
+<a href="../index.html" class="home home-top">H</a>
+<a href="../{}" class="prev prev-top">Prev</a>
+<a href="../{}" class="next next-top">Next</a>
+<h1>{}</h1>
 '''
 
 BOTTOM='''
+<a href="../index.html" class="home home-bottom">H</a>
+<a href="../{}" class="prev prev-bottom">Prev</a>
+<a href="../{}" class="next next-bottom">Next</a>
 </body>
 </html>
 '''
@@ -68,7 +75,7 @@ def toHTML(pairs):
         out += '</div>\n</div>\n'
     return out
 
-def chapter_page(title, uri=None, style="style.css"):
+def chapter_page(title, uri=None, style="style.css", prv=None, nxt=None):
     if uri is None:
         uri = geturi(title)
         if not uri:
@@ -77,7 +84,8 @@ def chapter_page(title, uri=None, style="style.css"):
     # debug(geturi(chapter), chapter)
     body = toHTML(compare(uri, title))
 
-    return TOP.format(title.encode('utf8'), style) + body + BOTTOM.encode('utf8')
+    title = title.encode('utf8')
+    return TOP.format(title, style, prv, nxt, title) + body + BOTTOM.format(prv, nxt)
 
 english = sqlite3.connect('./english').cursor()
 spanish = sqlite3.connect('./spanish').cursor()
