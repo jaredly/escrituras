@@ -16,16 +16,18 @@ TOP='''
     <link rel="stylesheet" href="{}">
 </head>
 <body>
-<a href="../index.html" class="home home-top">H</a>
+<div class="wrap">
+<a href="../index.html" class="home home-top">Home</a>
 <a href="../{}" class="prev prev-top">Prev</a>
 <a href="../{}" class="next next-top">Next</a>
 <h1>{}</h1>
 '''
 
 BOTTOM='''
-<a href="../index.html" class="home home-bottom">H</a>
+<a href="../index.html" class="home home-bottom">Home</a>
 <a href="../{}" class="prev prev-bottom">Prev</a>
 <a href="../{}" class="next next-bottom">Next</a>
+</div>
 </body>
 </html>
 '''

@@ -1,0 +1,42 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.book-chapters {
+}
+
+.book-list:focus {
+    outline: none;
+}
+
+.book-list:focus .book-chapters {
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.book-list {
+}
+
+.book-title {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: rgb(0, 67, 255);
+    color: white;
+    font-weight: bold;
+}
+
+.chapter a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: white;
+    color: #555;
+    font-weight: bold;
+}
