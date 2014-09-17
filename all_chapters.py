@@ -61,7 +61,7 @@ def main(base = 'www'):
         print title,
         fname = uri_to_filename(uri)
         fullname = os.path.join(base, fname)
-        if 1:# not os.path.isfile(fullname):
+        if not os.path.isfile(fullname):
             print "writing"
             nxt = 'index.html'
             prv = 'index.html'
