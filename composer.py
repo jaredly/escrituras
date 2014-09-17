@@ -17,16 +17,16 @@ TOP='''
 </head>
 <body>
 <div class="wrap">
-<a href="../index.html" class="home home-top">Home</a>
-<a href="../{}" class="prev prev-top">Prev</a>
-<a href="../{}" class="next next-top">Next</a>
-<h1>{}</h1>
+  <a href="../index.html" class="home home-top">Home</a>
+  <a href="../{}" class="prev prev-top">Prev</a>
+  <a href="../{}" class="next next-top">Next</a>
+  <h1>{}</h1>
 '''
 
 BOTTOM='''
-<a href="../index.html" class="home home-bottom">Home</a>
-<a href="../{}" class="prev prev-bottom">Prev</a>
-<a href="../{}" class="next next-bottom">Next</a>
+  <a href="../index.html" class="home home-bottom">Home</a>
+  <a href="../{}" class="prev prev-bottom">Prev</a>
+  <a href="../{}" class="next next-bottom">Next</a>
 </div>
 </body>
 </html>
