@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "jstransform": "~6.3.2",
+    "reactify": "~0.14.0"
+  }
+}

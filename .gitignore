@@ -2,3 +2,7 @@
 *.swp
 /www
 /app
+/files
+/english
+/spanish
+/node_modules

@@ -77,6 +77,17 @@ def toHTML(pairs):
         out += '</div>\n</div>\n'
     return out
 
+def toJSON(pairs):
+    return pairs
+
+def chapter_json(title, uri=None):
+    if uri is None:
+        uri = geturi(title)
+        if not uri:
+            return False
+
+    return list(compare(uri, title))
+
 def chapter_page(title, uri=None, style="style.css", prv=None, nxt=None):
     if uri is None:
         uri = geturi(title)
