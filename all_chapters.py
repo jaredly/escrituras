@@ -61,7 +61,7 @@ def main(base = 'www'):
         print title,
         fname = uri_to_filename(uri)
         fullname = os.path.join(base, fname)
-        if not os.path.isfile(fullname):
+        if ALL or not os.path.isfile(fullname):
             print "writing"
             nxt = 'index.html'
             prv = 'index.html'
@@ -89,6 +89,7 @@ def main(base = 'www'):
     open(os.path.join(base, 'index.html'), 'w').write(all_text)
 
 if __name__ == '__main__':
+    ALL = True
     main()
 
 # vim: et sw=4 sts=4
