@@ -5,38 +5,48 @@ body {
     font-family: sans-serif;
 }
 
-.book-chapters {
+.App {
+    overflow: hidden;
+    max-width: 400px;
+    margin: 0px auto;
+    overflow: hidden;
 }
 
-.book-list:focus {
-    outline: none;
+.Home_title {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #B1AEFF;
 }
 
-.book-list:focus .book-chapters {
-}
-
-ul {
+ul,
+.BookList {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.book-list {
-}
-
-.book-title {
+.BookListing_title {
     cursor: pointer;
     padding: 10px 20px;
-    background-color: rgb(0, 67, 255);
-    color: white;
+    color: rgb(82, 82, 82);
     font-weight: bold;
+    border-bottom: 1px solid rgb(202, 202, 255);
 }
 
-.chapter a {
+.BookListing_chapter {
     display: block;
+    margin-left: 25px;
     text-decoration: none;
     padding: 10px 20px;
     background-color: white;
     color: #555;
     font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px 2px 5px black;
 }
+
+.BookListing_chapter:hover {
+    background-color: #eee;
+}
+

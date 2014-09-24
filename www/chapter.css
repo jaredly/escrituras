@@ -1,12 +1,23 @@
 
-body {
-    max-width: 400px;
-    margin: 10px auto;
-    overflow: hidden;
+.Chapter_title {
+    margin: 10px 15px 0;
+    font-weight: bold;
+    text-align: center;
 }
 
-.wrap {
-    overflow: hidden;
+.Chapter_loading {
+    margin: 20px 40px;
+}
+
+.Chapter_home,
+.Chapter_next,
+.Chapter_prev {
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-right: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
 }
 
 .verse {
@@ -25,7 +36,7 @@ body {
     padding: 0 10px;
 }
 
-.verse .en {
+.verse .english {
     color: #ddd;
     position: relative;
     left: -50%;
@@ -35,7 +46,7 @@ body {
     margin-left: 0px;
 }
 
-.verse .en:hover {
+.verse.show_english .english {
     color: #888;
 }
 

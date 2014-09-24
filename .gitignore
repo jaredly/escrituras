@@ -1,8 +1,10 @@
 *.pyc
 *.swp
+*.swo
 /www
 /app
 /files
 /english
 /spanish
 /node_modules
+/books.json
